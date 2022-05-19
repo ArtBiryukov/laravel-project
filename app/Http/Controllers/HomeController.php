@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function show()
+    public function show ()
         {
             return '<div class="title">Приветственная страница новостного портала</div>';
         }

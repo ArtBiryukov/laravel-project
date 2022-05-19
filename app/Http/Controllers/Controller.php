@@ -12,34 +12,34 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-	public function getNews(int $id = null): array
-	{
-		$news = [];
-		$faker = Factory::create();
+    public function getNews(int $id = null): array
+    {
+        $news = [];
+        $faker = Factory::create();
 
-		if($id) {
-			return [
-				'id' => $id,
-				'title' => $faker->jobTitle(),
-				'author' => $faker->name(),
-				'image'  => $faker->imageUrl(),
-				'description' => $faker->text(150),
-				'created_at' => now('Europe/Moscow')
-			];
-		}
+        if($id) {
+            return [
+                'id' => $id,
+                'title' => $faker->jobTitle(),
+                'author' => $faker->name(),
+                'image'  => $faker->imageUrl(),
+                'description' => $faker->text(200),
+                'created_at' => now('Europe/Moscow')
+            ];
+        }
 
-		for($i=0; $i<10; $i++) {
-			$id = $i +1;
-			$news[] = [
-				'id' => $id,
-				'title' => $faker->jobTitle(),
-				'author' => $faker->name(),
-				'image'  => $faker->imageUrl(),
-				'description' =>  $faker->text(150),
-				'created_at' => now('Europe/Moscow')
-			];
-		}
+        for($i=0; $i<10; $i++) {
+            $id = $i +1;
+            $news[] = [
+                'id' => $id,
+                'title' => $faker->jobTitle(),
+                'author' => $faker->name(),
+                'image'  => $faker->imageUrl(),
+                'description' =>  $faker->text(200),
+                'created_at' => now('Europe/Moscow')
+            ];
+        }
 
-		return $news;
-	}
+        return $news;
+    }
 }
