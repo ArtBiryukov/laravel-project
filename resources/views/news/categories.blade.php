@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
+    <title>News Portal</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
@@ -52,27 +51,63 @@
     </svg>
 
     {{--Header--}}
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
 
-    <header class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">
-            <svg class="bi me-2" width="40" height="45">
-                <use xlink:href="#logo-white" />
-            </svg>
-            <span class="fs-4 text-white">GB News</span>
-        </a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-nav">
-            <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Выход</a>
+                <a href="/" class="d-flex align-items-center  mb-md-0 me-md-auto text-decoration-none">
+                    <svg class="bi me-2" width="40" height="45">
+                        <use xlink:href="#logo-white" />
+                    </svg>
+                    <span class="fs-4 text-white">GB News</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end text-white bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">GB News Portal</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/">Главная</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Категории</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О нас</a>
+                            </li>
+                        </ul>
+
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                            <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Поиск новостей..." aria-label="Search">
+                        </form>
+
+                        <div class="text-center">
+                            <button type="button" class="btn btn-outline-light me-2">Войти</button>
+                            <button type="button" class="btn btn-warning">Зарегистрироваться</button>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    {{--Begin page content--}}
+    <!-- Begin page content -->
 
-    Текстовыая новдаыщтащывтащолфытвшщпофывклщтепоьщфыукткпшщзцуоьткйпмщоьцуккщоьтпмзйоьтпкшщзопе
+    <main class="container pt-5 pb-5">
+        Страница категорий
+
+    </main>
 
     {{--Footer--}}
 
@@ -100,7 +135,6 @@
     </footer>
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 

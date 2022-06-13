@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(82, 82, 82, 0.13);
+
+    display: grid;
+    grid-template-rows: 1fr auto 70px;
+    height: 100vh;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .news__content {
+        grid-template-columns:  1fr;
+        gap: 10px;
+    }
+}
+
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-img {
+    height: 300px;
+    object-fit: cover;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.info-item:first-child {
+    justify-content: flex-start;
+}
+
+.info-item > p {
+    margin-right: 15px;
+}
+
+.info-item > p:last-child {
+    margin: 0;
+}
+
+.text-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.form-body > input {
+    width: 300px;
+}
+
+textarea {
+    max-height: 150px;
+}
+
+.comment {
+    background-color: aliceblue;
+}
+
+.comment-content:empty::after {
+    content: 'комментариев нету';
+}
+
+.comment-body {
+    background-color: #656cee;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.comment-body:last-child {
+    margin: 0;
+}
+
+.comment-date {
+    font-size: 12px;
+}
+
+.comment-info {
+    border-bottom: 1px solid #fff;
+}
+
+.comment-text {
+    font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+        position: fixed;
+        top: 56px; /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #343a40;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+
+.nav-scroller .nav {
+    color: rgba(255, 255, 255, .75);
+}
+
+.nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+    color: #6c757d;
+}
+
+.nav-scroller .nav-link:hover {
+    color: #007bff;
+}
+
+.nav-scroller .active {
+    font-weight: 500;
+    color: #343a40;
+}
